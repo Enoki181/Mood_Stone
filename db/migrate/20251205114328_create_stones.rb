@@ -10,6 +10,6 @@ class CreateStones < ActiveRecord::Migration[8.1]
 
       t.timestamps
     end
-    add_index :stones, [:min_mood, :max_mood]
+    add_index :stones, [ :min_mood, :max_mood ]
   end
 end
