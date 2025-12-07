@@ -1,0 +1,2 @@
+module StoneConverterHelper
+end

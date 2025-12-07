@@ -1,0 +1,46 @@
+<div class="stone-converter text-center">
+  <h1 class="text-lg font-bold">今の気分は？</h1>
+  
+  <div class="slider-container">
+    <!-- 気分値の表示 -->
+    <div class="mood-value-display">
+      <span id="mood-value">0</span>
+    </div>
+    
+    <!-- スライダー -->
+    <input 
+      type="range" 
+      id="mood-slider" 
+      min="-100" 
+      max="100" 
+      value="0" 
+      step="1"
+      list="sliderMarkers"
+    >
+
+    <!-- 目盛りラベル -->
+    <div class="slider-labels">
+      <span>-100</span>
+      <span>0</span>
+      <span>+100</span>
+    </div>
+    
+    <!-- 石をつくるボタン -->
+    <button id="convert-btn" class="relative h-12 overflow-hidden rounded bg-neutral-950 px-5 py-2.5 text-white transition-all duration-200 hover:bg-neutral-800 hover:ring-offset-2 active:ring-2 active:ring-neutral-800 mt-8">
+      石をみつける
+    </button>
+  </div>
+
+  <!-- モーダル（最初は非表示） -->
+  <div id="stone-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div id="stone-info">
+        <!-- ここに石の情報が表示される -->
+      </div>
+    </div>
+  </div>
+  
+  <!-- 背景オーバーレイ -->
+  <div id="overlay" style="display: none;"></div>
+</div>

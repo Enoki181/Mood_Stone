@@ -10,8 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 0) do
+ActiveRecord::Schema[8.1].define(version: 2025_12_05_114328) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
+  create_table "stones", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.text "description"
+    t.string "image_path"
+    t.integer "max_mood", null: false
+    t.integer "min_mood", null: false
+    t.string "name_en", null: false
+    t.string "name_ja", null: false
+    t.datetime "updated_at", null: false
+    t.index ["min_mood", "max_mood"], name: "index_stones_on_min_mood_and_max_mood"
+  end
 end
