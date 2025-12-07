@@ -4,7 +4,6 @@ class StoneConverterController < ApplicationController
   def convert
     mood_value = params[:mood].to_i
     stone = Stone.find_by_mood(mood_value)
-    
     if stone
       render json: {
         name_ja: stone.name_ja,
@@ -13,7 +12,7 @@ class StoneConverterController < ApplicationController
         description: stone.description
       }
     else
-      render json: { error: '該当する石が見つかりませんでした' }, status: :not_found
+      render json: { error: "該当する石が見つかりませんでした" }, status: :not_found
     end
   end
 end

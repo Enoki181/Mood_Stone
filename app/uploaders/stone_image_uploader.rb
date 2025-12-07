@@ -16,7 +16,7 @@ class StoneImageUploader < CarrierWave::Uploader::Base
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   def default_url
-    'board_placeholder'
+    "board_placeholder"
   end
 
   # Process files as they are uploaded:
