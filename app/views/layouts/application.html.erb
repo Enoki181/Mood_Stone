@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Myapp" %></title>
+    <title><%= content_for(:title) || "Mood Stone" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Myapp">
@@ -24,6 +24,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="site-header">
+      <div class="flex justify-center">
+        <h1 class="app-title text-3xl text-center font-Bold mt-8 mb-6">
+          <%= link_to "Mood Stone", root_path %>
+        </h1>
+      </div>
+    </header>
+    
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>
