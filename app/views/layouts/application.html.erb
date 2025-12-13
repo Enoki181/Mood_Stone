@@ -19,14 +19,14 @@
     <link rel="apple-touch-icon" href="/icon.png">
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
 
   <body>
-    <header class="site-header">
-      <div class="flex justify-center">
-        <h1 class="app-title text-3xl text-center font-Bold mt-8 mb-6">
+    <header class="site-header mx-auto">
+      <div class="bg-black flex justify-center">
+        <h1 class="app-title text-3xl text-center text-white font-mono font-bold mt-8 mb-6">
           <%= link_to "Mood Stone", root_path %>
         </h1>
       </div>
