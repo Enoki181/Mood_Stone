@@ -46,7 +46,7 @@ stones = [
     image_path: "quartz.jpg",
     description: "透明でインクルージョンのないクォーツ　石言葉：純粋"
   },
-  
+
   # ポジティブ寄り（+15 〜 +100）
   {
     name_ja: "砂金石 アベンチュリン",
@@ -79,8 +79,8 @@ stones = [
     max_mood: 100,
     image_path: "rose_quartz.jpg",
     description: "淡いピンク色のクォーツ　石言葉：美と健康"
-  },
-  
+  }
+
 ]
 
 stones.each do |stone_data|
