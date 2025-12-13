@@ -1,15 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   const slider = document.getElementById('mood-slider');
   const moodValueDisplay = document.getElementById('mood-value');
-  const findStoneBtn = document.getElementById('convert-btn');
+  const findStoneBtn = document.getElementById('find-btn');
   const modal = document.getElementById('stone-modal');
   const overlay = document.getElementById('overlay');
   const closeBtn = document.querySelector('.close-btn');
 
   // スライダーの値が変わったら表示を更新
   slider.addEventListener('input', (e) => {
-    const value = e.target.value;
-    moodValueDisplay.textContent = value;
+    moodValueDisplay.textContent = slider.value;
   });
 
   // ボタンをクリックしたら石を探す
@@ -23,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(`気分値: ${moodValue} の石を探しています...`);
     
     // サーバーにリクエストを送る
-    fetch(`/stones/search?mood=${moodValue}`)
+    fetch(`/stone_converter/convert?mood=${moodValue}`)
       .then(response => response.json())
       .then(data => {
         displayStone(data);
@@ -34,35 +33,38 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 
-  // 石の情報をモーダルに表示
-  function displayStone(stone) {
-    const stoneInfo = document.getElementById('stone-info');
+  // モーダルに石の情報を表示
+  function displayStone(data) {
+    // データを表示
+    document.getElementById('stone-image').src = data.image_path;
+    document.getElementById('stone-name-en').textContent = data.name_en;
+    document.getElementById('stone-name-ja').textContent = data.name_ja;
+    document.getElementById('stone-description').textContent = data.description;
     
-    stoneInfo.innerHTML = `
-      <h2>${stone.name}</h2>
-      <div class="stone-image">
-        <img src="${stone.image_url}" alt="${stone.name}">
-      </div>
-      <div class="stone-details">
-        <p class="stone-description">${stone.description}</p>
-        <div class="stone-properties">
-          <p><strong>効果:</strong> ${stone.effect}</p>
-          <p><strong>対応する気分値:</strong> ${stone.mood_value}</p>
-        </div>
-      </div>
-    `;
-    
-    // モーダルを表示
-    modal.style.display = 'flex';
-    overlay.style.display = 'block';
+    // モーダルとオーバーレイを表示
+    modal.classList.add('active');
+    overlay.classList.add('active');
   }
 
-  // モーダルを閉じる
-  closeBtn.addEventListener('click', closeModal);
-  overlay.addEventListener('click', closeModal);
-
+  // モーダルを閉じる関数
   function closeModal() {
-    modal.style.display = 'none';
-    overlay.style.display = 'none';
+    modal.classList.remove('active');
+    overlay.classList.remove('active');
   }
+
+  // 閉じるボタンのクリック処理
+  closeBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // イベントの伝播を止める
+    closeModal();
+  });
+
+  // オーバーレイのクリック処理（背景をクリックしたら閉じる）
+  overlay.addEventListener('click', () => {
+    closeModal();
+  });
+
+  // モーダル内をクリックしても閉じないようにする
+  modal.addEventListener('click', (e) => {
+    e.stopPropagation(); // クリックイベントがオーバーレイに伝わらないようにする
+  });
 });
