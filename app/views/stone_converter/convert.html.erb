@@ -1,0 +1,26 @@
+<div class="modal-content text-center space-y-4">
+  <!-- 英名 -->
+  <h2 id="stone-name-en" class="text-xl font-mono font-semibold tracking-wide mt-4">
+    <%= @stone.name_en %>
+  </h2>
+
+  <!-- 画像 -->
+  <div class="stone-image-wrapper mx-auto w-48 h-48 overflow-hidden rounded-lg bg-gray-100">
+    <img id="stone-image" class="w-full h-full object-contain" src="" alt="石の画像">
+  </div>
+
+  <!-- 和名 -->
+  <p id="stone-name-ja" class="text-sm font-mono text-gray-600">
+    <%= @stone.name_ja %>
+  </p>
+
+  <!-- 説明 -->
+  <p id="stone-description" class="text-xs font-mono text-gray-500 leading-relaxed">
+    <%= @stone.description %>
+  </p>
+
+  <!-- もどるボタン -->
+  <button id="return-btn" class="h-12 overflow-hidden rounded bg-neutral-950 px-5 py-2.5 text-white transition-all duration-200 hover:bg-neutral-800 hover:ring-offset-2 active:ring-2 active:ring-neutral-800 mt-1">
+    <%= link_to "もどる", root_path %>
+  </button>
+</div>

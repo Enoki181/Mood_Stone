@@ -9,7 +9,7 @@ stones = [
     name_en: "Morion",
     min_mood: -100,
     max_mood: -96,
-    image_path: "morion.jpg",
+    image_path: "morion.png",
     description: "ほとんど光を通さない黒色のクォーツ　石言葉：魔除け"
   },
   {
@@ -17,7 +17,7 @@ stones = [
     name_en: "Smoky Quartz",
     min_mood: -95,
     max_mood: -61,
-    image_path: "morion.jpg",
+    image_path: "morion.png",
     description: "褐色で黄灰色がかったクォーツ　石言葉：癒し"
   },
   {
@@ -25,7 +25,7 @@ stones = [
     name_en: "Amethyst",
     min_mood: -60,
     max_mood: -31,
-    image_path: "amethyst.jpg",
+    image_path: "amethyst.png",
     description: "深い紫色のクォーツ　石言葉：心の平和"
   },
   {
@@ -33,7 +33,7 @@ stones = [
     name_en: "Hawk's eye",
     min_mood: -30,
     max_mood: -16,
-    image_path: "hawks_eye.jpg",
+    image_path: "hawks_eye.png",
     description: "磨くと白い光の筋が現れる青色のクォーツ　石言葉：冷静"
   },
 
@@ -43,7 +43,7 @@ stones = [
     name_en: "Quartz",
     min_mood: -15,
     max_mood: 15,
-    image_path: "quartz.jpg",
+    image_path: "quartz.png",
     description: "透明でインクルージョンのないクォーツ　石言葉：純粋"
   },
 
@@ -53,7 +53,7 @@ stones = [
     name_en: "Aventurine",
     min_mood: 16,
     max_mood: 30,
-    image_path: "aventurine.jpg",
+    image_path: "aventurine.png",
     description: "含有する小さな鉱物が輝く緑色のクォーツ　石言葉：心の安定"
   },
   {
@@ -61,7 +61,7 @@ stones = [
     name_en: "Tiger's eye",
     min_mood: 31,
     max_mood: 60,
-    image_path: "tigers_eye.jpg",
+    image_path: "tigers_eye.png",
     description: "磨くと白い光の筋が現れる黄褐色のクォーツ　石言葉：決断力"
   },
   {
@@ -69,7 +69,7 @@ stones = [
     name_en: "Citrine",
     min_mood: 61,
     max_mood: 95,
-    image_path: "citrine.jpg",
+    image_path: "citrine.png",
     description: "透き通った黄色のクォーツ　石言葉：成功"
   },
   {
@@ -77,7 +77,7 @@ stones = [
     name_en: "Rose Quartz",
     min_mood: 96,
     max_mood: 100,
-    image_path: "rose_quartz.jpg",
+    image_path: "rose_quartz.png",
     description: "淡いピンク色のクォーツ　石言葉：美と健康"
   }
 
