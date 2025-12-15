@@ -1,58 +1,7 @@
 /* ========================================
-   モーダル本体（図鑑風デザイン）
-======================================== */
-#stone-modal {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.7);
-  background-color: white;
-  padding: 40px 30px;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  max-width: 500px;
-  width: 90%;
-  max-height: 80vh;
-  overflow-y: auto;
-  z-index: 1000;
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-#stone-modal.active {
-  display: block;
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-/* ========================================
-   閉じるボタン（角丸□の中の右上に配置）
-======================================== */
-#close-btn {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 28px;
-  font-weight: normal;
-  color: #999;
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: color 0.2s ease;
-  padding: 5px 10px;
-  line-height: 1;
-  z-index: 1001;
-}
-
-#close-btn:hover {
-  color: #555;
-}
-
-/* ========================================
    モーダルの内容
 ======================================== */
-.modal-content {
+.stone-content {
   text-align: center;
   padding-top: 10px;
 }
@@ -93,7 +42,7 @@
   font-weight: normal;
 }
 
-/* 石の説明 */
+/* 石の説明 - 和名よりも控え目に*/
 #stone-description {
   font-size: 15px;
   line-height: 1.8;
@@ -101,47 +50,4 @@
   text-align: left;
   padding: 0 10px;
   margin-top: 20px;
-}
-
-/* ========================================
-   スマホ対応
-======================================== */
-@media (max-width: 600px) {
-  #stone-modal {
-    padding: 30px 20px;
-    width: 95%;
-  }
-  
-  #stone-name-en {
-    font-size: 26px;
-  }
-  
-  #stone-image {
-    max-width: 240px;
-  }
-  
-  #stone-description {
-    font-size: 14px;
-  }
-}
-
-/* ========================================
-   スクロールバーのスタイル（オプション）
-======================================== */
-#stone-modal::-webkit-scrollbar {
-  width: 8px;
-}
-
-#stone-modal::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-#stone-modal::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 10px;
-}
-
-#stone-modal::-webkit-scrollbar-thumb:hover {
-  background: #999;
 }

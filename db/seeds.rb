@@ -17,7 +17,7 @@ stones = [
     name_en: "Smoky Quartz",
     min_mood: -95,
     max_mood: -61,
-    image_path: "morion.png",
+    image_path: "smoky_quartz.png",
     description: "褐色で黄灰色がかったクォーツ　石言葉：癒し"
   },
   {
@@ -42,9 +42,25 @@ stones = [
     name_ja: "水晶 クオーツ",
     name_en: "Quartz",
     min_mood: -15,
-    max_mood: 15,
+    max_mood: -13,
+    image_path: "quartz_ja_twin.png",
+    description: "日本式双晶の透明なクォーツ　石言葉：純粋"
+  },
+  {
+    name_ja: "水晶 クオーツ",
+    name_en: "Quartz",
+    min_mood: -12,
+    max_mood: 12,
     image_path: "quartz.png",
     description: "透明でインクルージョンのないクォーツ　石言葉：純粋"
+  },
+  {
+    name_ja: "水晶 クオーツ",
+    name_en: "Quartz",
+    min_mood: 13,
+    max_mood: 15,
+    image_path: "quartz_ja_twin.png",
+    description: "日本式双晶の透明なクォーツ　石言葉：純粋"
   },
 
   # ポジティブ寄り（+15 〜 +100）
