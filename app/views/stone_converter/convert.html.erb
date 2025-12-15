@@ -1,4 +1,4 @@
-<div class="modal-content text-center space-y-4">
+<div class="stone-content text-center space-y-4">
   <!-- 英名 -->
   <h2 id="stone-name-en" class="text-xl font-mono font-semibold tracking-wide mt-4">
     <%= @stone.name_en %>
@@ -6,7 +6,7 @@
 
   <!-- 画像 -->
   <div class="stone-image-wrapper mx-auto w-48 h-48 overflow-hidden rounded-lg bg-gray-100">
-    <img id="stone-image" class="w-full h-full object-contain" src="" alt="石の画像">
+    <%= image_tag @stone.image_path, class: "w-full h-full object-contain", alt: "石の画像" %>
   </div>
 
   <!-- 和名 -->
@@ -19,8 +19,14 @@
     <%= @stone.description %>
   </p>
 
+  <!-- シェアボタン -->
+  <div class="stone_actions">
+  <%= link_to "Xで結果を報告する",
+  "https://twitter.com/intent/tweet?text=#{ERB::Util.url_encode(@post_message)}&hashtags=#{ERB::Util.url_encode(@post_tags)}",
+      class: "h-12 overflow-hidden rounded bg-sky-200 px-5 py-2.5 text-neutral-950 transition-all duration-200 hover:bg-sky-300 hover:ring-offset-2 active:ring-2 active:ring-sky-800 mt-1",
+      target: "_blank",
+      rel: "noopener noreferrer" %>
+
   <!-- もどるボタン -->
-  <button id="return-btn" class="h-12 overflow-hidden rounded bg-neutral-950 px-5 py-2.5 text-white transition-all duration-200 hover:bg-neutral-800 hover:ring-offset-2 active:ring-2 active:ring-neutral-800 mt-1">
-    <%= link_to "もどる", root_path %>
-  </button>
+  <%= link_to "もどる", root_path, id:"return-btn", class: "h-12 overflow-hidden rounded bg-neutral-950 px-5 py-2.5 text-white transition-all duration-200 hover:bg-neutral-800 hover:ring-offset-2 active:ring-2 active:ring-neutral-800 mt-1" %>
 </div>
