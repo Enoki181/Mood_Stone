@@ -10,7 +10,7 @@ stones = [
     min_mood: -100,
     max_mood: -96,
     image_path: "morion.png",
-    description: "ほとんど光を通さない黒色のクォーツ　石言葉：魔除け"
+    description: "ほとんど光を通さない黒色のクォーツ。微量のアルミニウムイオンを含み、放射線を受けることで発色。漆黒のものほど価値が高い。"
   },
   {
     name_ja: "煙水晶 スモーキークォーツ",
@@ -18,7 +18,7 @@ stones = [
     min_mood: -95,
     max_mood: -61,
     image_path: "smoky_quartz.png",
-    description: "褐色で黄灰色がかったクォーツ　石言葉：癒し"
+    description: "褐色で黄灰色がかったクォーツ。微量のアルミニウムイオンを含み、放射線を受けることで発色。濃い色のものはモリオンとよばれる。"
   },
   {
     name_ja: "紫水晶 アメジスト",
@@ -26,7 +26,7 @@ stones = [
     min_mood: -60,
     max_mood: -31,
     image_path: "amethyst.png",
-    description: "深い紫色のクォーツ　石言葉：心の平和"
+    description: "紫色のクォーツ。微量の鉄イオンを含み、紫色に発色。高温で加熱すると、黄色に変化する。"
   },
   {
     name_ja: "鷹目石 ホークスアイ",
@@ -34,7 +34,7 @@ stones = [
     min_mood: -30,
     max_mood: -16,
     image_path: "hawks_eye.png",
-    description: "磨くと白い光の筋が現れる青色のクォーツ　石言葉：冷静"
+    description: "繊維状の鉱物が酸化せずに残り、青色に発色したクォーツ。磨くと白い光の筋が現れる。"
   },
 
   # 中間（-15 〜 +15）
@@ -44,7 +44,7 @@ stones = [
     min_mood: -15,
     max_mood: -13,
     image_path: "quartz_ja_twin.png",
-    description: "日本式双晶の透明なクォーツ　石言葉：純粋"
+    description: "日本式双晶のクォーツ。2つの水晶が決まった角度で結合し、ハート型に見える。V字型のものもある。"
   },
   {
     name_ja: "水晶 クオーツ",
@@ -52,7 +52,7 @@ stones = [
     min_mood: -12,
     max_mood: 12,
     image_path: "quartz.png",
-    description: "透明でインクルージョンのないクォーツ　石言葉：純粋"
+    description: "クォーツ。透明でインクルージョンのないものほど高品質で、透明度の高いものはレンズなどにも用いられる。"
   },
   {
     name_ja: "水晶 クオーツ",
@@ -60,7 +60,7 @@ stones = [
     min_mood: 13,
     max_mood: 15,
     image_path: "quartz_ja_twin.png",
-    description: "日本式双晶の透明なクォーツ　石言葉：純粋"
+    description: "日本式双晶のクォーツ。2つの水晶が決まった角度で結合し、ハート型に見える。V字型のものもある。"
   },
 
   # ポジティブ寄り（+15 〜 +100）
@@ -70,7 +70,7 @@ stones = [
     min_mood: 16,
     max_mood: 30,
     image_path: "aventurine.png",
-    description: "含有する小さな鉱物が輝く緑色のクォーツ　石言葉：心の安定"
+    description: "中に含む小さな鉱物がきらきらと輝く緑色のクォーツ。微量なクロムイオンなどを含み、通常は緑色に発色。"
   },
   {
     name_ja: "虎目石 タイガーアイ",
@@ -78,7 +78,7 @@ stones = [
     min_mood: 31,
     max_mood: 60,
     image_path: "tigers_eye.png",
-    description: "磨くと白い光の筋が現れる黄褐色のクォーツ　石言葉：決断力"
+    description: "酸化した繊維状の鉱物が、黄褐色に発色したクォーツ。磨くと白い光の筋が現れる。"
   },
   {
     name_ja: "黄水晶 シトリン",
@@ -86,7 +86,7 @@ stones = [
     min_mood: 61,
     max_mood: 95,
     image_path: "citrine.png",
-    description: "透き通った黄色のクォーツ　石言葉：成功"
+    description: "黄色のクォーツ。微量の鉄イオンが含まれ、黄色に発色。赤みがかったものや緑がかったものもある。"
   },
   {
     name_ja: "紅水晶 ローズクォーツ",
@@ -94,7 +94,7 @@ stones = [
     min_mood: 96,
     max_mood: 100,
     image_path: "rose_quartz.png",
-    description: "淡いピンク色のクォーツ　石言葉：美と健康"
+    description: "淡ピンク色のクォーツ。微量のチタンイオンが含まれ、ピンク色に発色。結晶状ではなく塊状で産出しやすい。"
   }
 
 ]

@@ -1,3 +1,9 @@
+<% if flash[:alert] %>
+  <div class="mx-auto mt-4 max-w-md rounded bg-red-50 px-4 py-2 text-sm text-red-600 text-center">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
+
 <h1 class="text-center font-mono font-semibold text-gray-400 text-sm mt-2 mb-10">今の気分を入力して、気分に合う石をみつけましょう</h1>
 <div class="stone-converter text-center">
   <h1 class="text-xl font-mono font-bold mt-8 mb-2">今の気分は？</h1>
