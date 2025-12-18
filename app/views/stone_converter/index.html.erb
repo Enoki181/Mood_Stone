@@ -1,30 +1,123 @@
 <% if flash[:alert] %>
-  <div class="mx-auto mt-4 max-w-md rounded bg-red-50 px-4 py-2 text-sm text-red-600 text-center">
+  <div
+    class="
+      mx-auto
+      mt-4
+      max-w-md
+      rounded
+      bg-red-50
+      px-4
+      py-2
+      text-sm
+      text-red-600
+      text-center
+    "
+  >
     <%= flash[:alert] %>
   </div>
 <% end %>
 
-<h1 class="text-center font-mono font-semibold text-gray-400 text-sm mt-2 mb-10">今の気分を入力して、気分に合う石をみつけましょう</h1>
+<h1
+  class="
+    text-center
+    font-mono
+    font-semibold
+    text-gray-400
+    text-sm
+    mt-2
+    mb-10
+  "
+>
+  今の気分を入力して、気分に合う石をみつけましょう
+</h1>
+
 <div class="stone-converter text-center">
-  <h1 class="text-xl font-mono font-bold mt-8 mb-2">今の気分は？</h1>
+  <h1
+    class="
+      text-xl
+      font-mono
+      font-bold
+      mt-8
+      mb-2
+    "
+  >
+    今の気分は？
+  </h1>
+
   <!-- 気分値の表示 -->
   <div class="mood-value-display text-5xl font-mono">
     <span id="mood-value">0</span>
   </div>
-  <div class="slider-container max-w">     
+  
+  <div class="slider-container mx-auto max-w-md px-10">     
     <!-- スライダー -->
     <div class="mood-slider">
       <div class="relative mt-2 mb-6">
-        <span class="text-m text-body font-mono text-gray-500 start-0 -bottom-6">-100</span>
-              <input id="mood-slider" type="range" value="0" min="-100" max="100" step="1" class="h-2 bg-neutral-quaternary rounded-full cursor-pointer">
-
-        <span class="text-m text-body font-mono text-gray-500 end-0 -bottom-6">100</span>
+        <span
+          class="
+            absolute
+            text-m
+            text-bold
+            font-mono
+            text-gray-500
+            start-0
+            -bottom-6
+          "
+        >
+          -100
+        </span>
+          <input
+            id="mood-slider"
+            type="range"
+            value="0"
+            min="-100"
+            max="100"
+            step="1"
+            class="
+              h-2
+              w-full
+              bg-neutral-quaternary
+              rounded-full
+              cursor-pointer
+            "
+          >
+        <span
+          class="
+            absolute
+            text-m
+            text-bold
+            font-mono
+            text-gray-500
+            end-0
+            -bottom-6
+          "
+        >
+          100
+        </span>
       </div>
     </div>
       
-      <!-- 石をみつけるボタン -->
-      <button id="find-btn" class="h-12 overflow-hidden rounded bg-neutral-950 px-5 py-2.5 text-white transition-all duration-200 hover:bg-neutral-800 hover:ring-offset-2 active:ring-2 active:ring-neutral-800 mt-1">
-        石をみつける
-      </button>
+    <!-- 石をみつけるボタン -->
+    <button
+      id="find-btn"
+      class="
+        h-12
+        overflow-hidden
+        rounded
+        bg-neutral-950
+        px-5
+        py-2.5
+        text-white
+        transition-all
+        duration-200
+        hover:bg-neutral-800
+        hover:ring-offset-2
+        active:ring-2
+        active:ring-neutral-800
+        mt-1
+      "
+    >
+      石をみつける
+    </button>
   </div>
 </div>
