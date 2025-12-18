@@ -1,6 +1,11 @@
 # 既存の石データを削除
-Stone.destroy_all
-
+# Stone.destroy_all
+#
+# renderのエラーへ対応。DBが空になっているので修正。
+if Stone.exists?
+  puts "⏭ 既に石データが存在するため seed をスキップします"
+  return
+end
 # -100 〜 +100 の範囲で石データを作成
 stones = [
   # ネガティブ寄り（-100 〜 -15）
