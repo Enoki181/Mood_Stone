@@ -41,7 +41,10 @@
   <!-- シェアボタン -->
   <div class="stone_actions">
   <%= link_to "Xで結果を報告する",
-  "https://twitter.com/intent/tweet?text=#{ERB::Util.url_encode(@post_message)}&hashtags=#{ERB::Util.url_encode(@post_tags)}",
+  "https://twitter.com/intent/tweet?" +
+  "text=#{ERB::Util.url_encode(@post_message)}" +
+  "&url=#{ERB::Util.url_encode(request.original_url)}" +
+  "&hashtags=#{ERB::Util.url_encode(@post_tags)}",
       class: "
         h-12
         overflow-hidden
