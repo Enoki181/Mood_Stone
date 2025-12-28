@@ -3,3 +3,4 @@ import "@hotwired/turbo-rails"
 import "./controllers"
 // app/javascript/application.js
 import "./stone_converter"
+import "./stone_animation"

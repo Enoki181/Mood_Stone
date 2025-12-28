@@ -1,4 +1,26 @@
-<div class="stone-content text-center space-y-4">
+<!-- 演出レイヤー -->
+<div
+  id="animation-layer"
+  class="fixed inset-0 z-50 flex items-center justify-center bg-transparent"
+>
+  <canvas id="particle-canvas" class="absolute inset-0"></canvas>
+
+  <!-- 中央の光（石からは出ない） -->
+  <div
+    id="light-core"
+    class="w-32 h-32 rounded-full opacity-0"
+  ></div>
+</div>
+<div 
+  id="stone-content"
+  class="
+    stone-content
+    text-center
+    space-y-4
+    opacity-0
+    transition-opacity
+    duration-600"
+>
   <!-- 英名 -->
   <h2
     id="stone-name-en"
